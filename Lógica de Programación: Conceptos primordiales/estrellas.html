@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juego de Adivinación</title>
+  <title>Estrellas</title>
 </head>
 <body>
 
-  <h1>Juego de adivinación</h1>
+  <h1>Estrellas</h1>
 
   <script>
 
     function saltarLinea() {
 
       document.write("<br>");
-      document.write("<br>");
-      document.write("<br>");
+      //document.write("<br>");
+      //document.write("<br>");
 
     }
 
@@ -26,7 +26,21 @@
       document.write(frase);
       saltarLinea();
 
-    }    
+    }
+    
+    //Anidando ciclos For
+    for (let lineas = 1; lineas <= 3; lineas++) {
+      
+      for (let columnas = 1; columnas <= 10; columnas++) {
+        document.write("*");
+         
+      }
+      
+      document.write("<br>");
+      
+    }
+    
+  
 
   </script>
 </body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array de ingredientes</title>
+</head>
+<body>
+  
+  <script>
+    let ingredientes = [];
+    let cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    let contadir = 1;
+    
+    while (contador <= cantidad) {
+      let ingrediente = prompt("Agrega tu ingrediente");
+      let existe = false;
+      
+      for (let p = 0; p < ingredientes.length; p++) {
+        if (ingredientes[p] == ingrediente) {
+          existe = true;
+          alert("Ingredient repetido");
+          break;
+        }
+      }
+      if (existe == false) {
+        ingredientes.push(ingrediente);
+        contador++;
+      }
+    }
+    
+    console.log(ingredientes);
+  </script>
+</body>
+</html>

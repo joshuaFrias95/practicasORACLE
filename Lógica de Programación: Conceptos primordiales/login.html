@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login de tres intentos</title>
+</head>
+<body>
+  
+  <h1>Login con 3 intentos</h1>
+  
+  <script>
+  
+  let cuenta = "alura";
+  let password = "alura123";
+  
+  let intentos = 3;
+  
+  while(intentos > 0) {
+    
+    //Dejamos las variables  de ingreso de datos dentro del ciclo While para que se pueda repetir hasta ingresar los datos correctos
+    let cuentaIngresada = prompt("Usuario");
+    let passwordIngresada = prompt("Contraseña");
+  
+    if (cuenta == cuentaIngresada) {
+      alert("Bienvenido al sistema, " + cuentaIngresada);
+      break;
+      
+    } else {
+      alert("Inicio de sesión inválido. Intenta nuevamente");
+      intentos--;
+    }
+  }
+  
+  alert("Inicio de sesión fallido. Intente más tarde");
+  </script>
+</body>
+</html>
