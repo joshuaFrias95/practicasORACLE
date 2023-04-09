@@ -1,0 +1,65 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+  </head>
+  <body>
+
+    <h1>Calculadora de Indice de Masa Corporal</h1>
+
+    <script>
+
+      function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+      }
+
+
+      function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+
+      }
+
+
+      function calcularImc(peso, altura) {
+
+      return Math.round(peso / (altura * altura))  //Retorno del total de IMC redondeado con la función Math.round()
+
+      }
+
+
+      let nombre= prompt("¿Cuál es tu nombre");
+      let pesoInformado = parseInt(prompt("Hola " + nombre + ", ¿Cuál es tu peso?"));
+      let alturaInformada = parseInt(prompt("Hola " + nombre + ", ¿Cuál es tu altura?"));
+      let imcReglamentarioMIN = 18.5;
+      let imcReglamentarioMAX = 24.9
+
+      imcCalculado = calcularImc(pesoInformado, alturaInformada);
+
+      imprimir(nombre + "tu IMC es de " + imcCalculado)  //Imprimimos el IMC que obtenemos de la función calcularImc()
+
+      if (imcCalculado >= imcReglamentarioMIN && imcCalculado <= imcReglamentarioMAX ) {
+
+      imprimir("Tu IMC es el correcto, según tus condiciones.")
+
+      } else if (imcCalculado >= imcReglamentarioMAX) {
+
+      imprimir("Tu IMC es mayor que el recomendado, posible sobrepeso");
+
+      } else if (imcCalculado <= imcReglamentarioMIN) {
+
+      imprimir("Tu IMC es menor que el recomendado");
+
+      }
+
+    </script>
+  </body>
+  </html>

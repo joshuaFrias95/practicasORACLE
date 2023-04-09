@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Año mundiales</title>
+</head>
+<body>
+
+  <h1>Años de mundiales</h1>
+
+  <script>
+
+    function saltarLinea() {
+
+      document.write("<br>");
+      //document.write("<br>");
+      //document.write("<br>");
+
+    }
+
+
+    function imprimir(frase) {
+
+      document.write(frase);
+      saltarLinea();
+
+    }
+
+    let anoMundial = 1930;
+    let anoActual = parseInt(prompt("Ingresa el año actual"));
+
+      
+    while (anoMundial <= anoActual) {
+    
+      imprimir("Hubo mundial de la FIFA en el año: " + anoMundial);
+      anoMundial = anoMundial + 4;    
+
+    }
+    
+  
+
+  </script>
+</body>
+</html>

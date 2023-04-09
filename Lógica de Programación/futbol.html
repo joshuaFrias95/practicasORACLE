@@ -1,0 +1,55 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>futbol</title>
+  </head>
+  <body>
+
+    <h1>Calculadora de puntos de un equipo de futbol</h1>
+
+    <script>
+
+      function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+      }
+
+      function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+      }
+
+
+      let victorias = parseInt(prompt("¿Cuántas victorias tuvo su equipo?")); //! prompt() vuelve todo a String
+      let empates = parseInt(prompt("¿Cuántas empates tuvo su equipo?")); //! Utilizamos parseInt(prompt()) para que nuestro dato numérico siga siendo número
+      let puntosTotales = victorias * 3 + empates;
+      let puntosAnoAnterior = 28;
+
+
+      imprimir("El total de puntos del equipo es: " + puntosTotales); //Imprimimosel valor total de los puntos que tiene el equipo
+
+    // Condicional para conocer si sus puntos son mayores ( > ), menores ( < ) o iguales ( == ) a los que tuvo el año pasado almacenados en la variablepuntosAnoAnterior
+
+    if (puntosTotales > puntosAnoAnterior) {
+
+      imprimir("El equipo tiene más puntos que el año pasado");
+
+    } else if (puntosTotales < puntosAnoAnterior) {
+
+      imprimir("El equipo tiene menos puntos que el año pasado");
+
+    } else if (puntosTotales == puntosAnoAnterior) {
+
+      imprimir("El equipo tiene los mismos puntos que el año pasado");
+
+    }
+    </script>
+  </body>
+  </html>
