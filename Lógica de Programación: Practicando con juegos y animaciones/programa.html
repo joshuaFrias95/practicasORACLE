@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Práctica Canva 1</title>
+</head>
+<body>
+  <canvas width="600", height="400">
+  
+  </canvas>
+  
+  <script>
+    let pantalla = document.querySelector("canvas");
+    let pincel = pantalla.getContext("2d");  // Creación de variable que creará gráficos
+    
+    pincel.fillStyle = "#f2f2f2";  //Propiedad
+    pincel.fillRect(0,0, 600, 400);  // Función
+    
+    pincel.fillStyle = "green";  //Propiedad
+    pincel.fillRect(0,0, 200, 400);  // Función
+    
+    pincel.fillStyle = "red";  //Propiedad
+    pincel.fillRect(400,0, 600, 400);  // Función
+    
+    
+    //Creando triangulo amarillo
+    pincel.fillStyle = "yellow";
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+    
+    
+    // Creando círculo azul
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
+    
+    </script>
+</body>
+</html>
