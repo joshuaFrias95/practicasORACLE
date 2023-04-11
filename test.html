@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>PROGRAMA calculo imc</h1>
+
+
+<script>
+
+
+function saltar() {
+    document.write("<br>")
+   document.write("<br>")
+document.write("<br>")
+
+} 
+
+function inprimir(frase) {
+    document.write(frase)
+    saltar()
+
+   
+    }       
+function calcularImc(peso,altura) {
+
+
+imc = peso / (altura * altura)
+
+}
+
+
+var pesoJ= 71
+var alturaJ=1.72
+var total=pesoJ/ (alturaJ * alturaJ)
+
+let peso = calcularImc(pesoJ,alturaJ)
+
+
+inprimir("el imc de cristian es: " + total )
+
+var pesoF= 75
+var alturaFe=1.73
+var totalFelipe=pesoF/ (alturaFe * alturaFe)
+
+inprimir("el imc de felipe es: " + totalFelipe )
+
+
+
+
+</script>
+</body>
+</html>
