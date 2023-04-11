@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Juego tiro al blanco</title>
+</head>
+<body>
+  <canvas width="600", height="400"></canvas>
+  
+  <script>
+    
+    let pantalla = document.querySelector("canvas");
+    let pincel = pantalla.getContext("2d");
+ 
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0,0,600,400);   
+    
+    function drawCirc(x, y, r, color) {
+      pincel.fillStyle = color;
+      pincel.beginPath();
+      pincel.arc(x, y, r, 0, 2 * Math.PI);
+      pincel.fill();
+      
+    }
+    
+    
+    function cleanScreen() {
+      pincel.clearRect(0,0,600,400); // Limpiamos la pantalla 
+      
+    }
+    
+    let x = 0;
+    let sentido = 1;
+    let r = 10;
+    let xRand;
+    let yRand;
+    
+    
+    function diana(x, y) {
+      drawCirc(x,y,r + 20, "red");
+      drawCirc(x,y,r + 10, "white");
+      drawCirc(x,y,r, "red");
+    
+    }
+    
+    function randPos(max) {
+    return Math.floor(Math.random() * max);
+    }
+    
+    
+    function refreshScreen() {
+      let ranX = randPos(600);
+      let ranY = randPos(400);
+      
+      cleanScreen();
+      diana(ranX, ranY);
+      console.log(ranX + "," + ranY);
+      
+    
+    }
+    
+    
+    
+    
+    function disparo(evento) {
+      let x = evento.pageX - pantalla.offsetLeft;
+      let y = evento.pageY - pantalla.offsetTop;
+      
+      if ((x < xRand + r) && (x > xRand - r) && (x < yRand + r) && (x > yRand)) {
+        alert("Acertaste");
+      
+      } 
+      
+    }
+    
+    
+    //setInterval(refreshScreen, 2500);
+    pantalla.onclick =  disparo;
+    
+  </script>
+</body>
+</html>

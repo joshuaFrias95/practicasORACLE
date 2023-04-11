@@ -15,12 +15,24 @@
     pincel.fillRect(0,0,600,400);
     
     function clickAlert(evento) {
+      let x = evento.pageX - pantalla.offsetLeft; // Cargamos la cordenada del eje X del click en una variable y restamos el exceso en su eje
+      let y = evento.pageY - pantalla.offsetTop; // Cargamos la cordenada del eje X del click en una variable y restamos el exceso en su eje // Concatenamos las dos posiciones y las mostramos en un alert
       
-    console.log(evento);
-      alert("Hiciste un click");
     }
     
-    pantalla.onclick = clickAlert;
+    function dibujarCirc(evento) {
+      let x = evento.pageX - pantalla.offsetLeft; 
+      let y = evento.pageY - pantalla.offsetTop;
+      
+      pincel.fillStyle = "blue";
+      pincel.beginPath();
+      pincel.arc(x, y, 10, 0, 2 * 3.14);
+      pincel.fill();
+      console.log(x + "," + y);
+      
+    }
+    
+    pantalla.onclick = dibujarCirc;
   </script>
 </body>
 </html>

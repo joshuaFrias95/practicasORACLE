@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Cambiando color con click derecho</title>
+</head>
+<body>
+  <canvas width="600", height="400"></canvas>
+  
+  <script>
+    
+    let pantalla = document.querySelector("canvas");
+    let pincel = pantalla.getContext("2d");
+ 
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+    let colors = ["blue", "red", "green"];
+    let i = 0;
+    
+    function cambiarColor() {
+      i++;
+
+      if (i >= colors.length) {
+      i = 0;
+      
+      }
+      return false;
+    }
+    
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;    
+        pincel.fillStyle = colors[i];
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);        
+    }
+
+    pantalla.onclick = dibujarCirculo;
+    pantalla.oncontextmenu = cambiarColor;
+  </script>
+</body>
+</html>
