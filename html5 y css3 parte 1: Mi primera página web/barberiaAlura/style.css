@@ -1,9 +1,13 @@
-body {
-  background: #ccc;
-}
+/* body {
+} */
 
 #banner {
   width: 100%;
+}
+
+.principal {
+  background: #ccc;
+  padding: 20px;
 }
 
 h1 {
@@ -20,4 +24,27 @@ p {
 
 em strong {
   color: red;
+}
+
+.diferenciales {
+  background: white;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+ul {
+display: inline-block;
+vertical-align: top;
+width: 20%;
+margin-right: 15%;
+}
+
+.items {
+  font-style: italic;
+}
+
+.imgDiferencial {
+  width: 50%;
 }
