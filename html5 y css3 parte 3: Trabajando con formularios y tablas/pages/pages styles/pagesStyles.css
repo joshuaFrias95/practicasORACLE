@@ -101,17 +101,19 @@ form {
   margin: 40px 0;
 }
 
-form label, form input {
+form label, form p {
   display: block;
-}
-
-form label {
   font-size: 20px;
   margin: 0 0 10px;
 }
 
-form input {
+.mainInputs {
+  display: block;
   margin: 0 0 20px;
   padding: 10px 25px;
   width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
 }
