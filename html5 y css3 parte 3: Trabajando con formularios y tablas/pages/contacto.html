@@ -23,33 +23,33 @@
   <main>
     <form action="">
       <label for="nombreApellido">Nombre y Apellido</label>
-      <input type="text" id="nombreApellido" class="mainInputs">
+      <input type="text" id="nombreApellido" class="mainInputs" required>
       
       <label for="mail">Correo electrónico</label>
-      <input type="text" id="mail" class="mainInputs">
+      <input type="email" id="mail" class="mainInputs"placeholder="email@dominio.com"  required>
       
       <label for="phone">Teléfono</label>
-      <input type="text" id="phone" class="mainInputs">
+      <input type="tel" id="phone" class="mainInputs" placeholder="(xxx) xxxx xxxx" required>
       
       <label for="mensaje">Mensaje</label>
-      <textarea name="" id="mensaje" cols="70" rows="10" class="mainInputs"></textarea>
+      <textarea name="" id="mensaje" cols="70" rows="10" class="mainInputs" required></textarea>
       
-      <div>
-        <p>¿Cómo te gustaría ser contactado?</p>
+      <fieldset>
+        <legend>¿Cómo te gustaría ser contactado?</legend>
       
         <label for="radioMail"><input name="contacto" type="radio" value="mail" id="radioMail">Correo electrónico</label>
         <label for="telefono"><input name="contacto" type="radio" value="telefono" id="telefono">Teléfono</label>
-        <label for="whatsapp"><input name="contacto" type="radio" value="whatsapp" id="whatsapp">Whatsapp</label>       
-      </div>
-      <div>
-        <p>¿En qué horario quieres tu cita?</p>
+        <label for="whatsapp"><input name="contacto" type="radio" value="whatsapp" id="whatsapp" checked>Whatsapp</label>       
+      </fieldset>
+      <fieldset>
+        <legend>¿En qué horario quieres tu cita?</legend>
         <select>
           <option value="">Mañana</option>
           <option value="">Tarde</option>
           <option value="">Noche</option>
         </select>
-      </div>
-      <label class="checkbox"><input type="checkbox" name="" id="">¿Te gustaría recibir novedades de la Barbería Alura?</label>
+      </fieldset>
+      <label class="checkbox"><input type="checkbox" checked>¿Te gustaría recibir novedades de la Barbería Alura?</label>
       <input type="submit" value="Enviar">
     </form>
   </main>
