@@ -1,5 +1,4 @@
-@import "compass/css3";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -99,10 +98,6 @@ footer{
     margin:20px;
 }
 
-main{
-    width: 940px;
-    margin: 0 auto;    
-}
 
 form{
     margin: 40px 0;
@@ -165,10 +160,16 @@ td,th{
     width:100%;
 }
 
+.principal {
+    background: #FEFEFE;
+    padding: 3em 0;
+}
 
 .principal p{
     margin: 0 0 0 1em;
     padding: 20px;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal strong {
@@ -194,14 +195,47 @@ font-style: italic;
 
 .mapa {
     padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p {
     margin: 0 0 2em;
     text-align: center;
 }
+.mapa-contenido {
+    width: 940px;
+    margin: 0 auto;
+}
 
-.imagenDiferenciales{
+.diferenciales {
+    background: #888888;
+    padding: 3em 0;
+}
+
+.contenido-diferenciales {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items {
+    line-height: 1.5;
+}
+
+.items:first-child {
+    font-weight: bold;
+}
+
+.items:before {
+    content: '★ ';
+}
+
+.imagen-diferenciales{
     width: 60%;
 }
 .video {
